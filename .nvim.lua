@@ -17,5 +17,3 @@ vim.g.ale_fixers = {
 }
 
 vim.g.ale_fix_on_save = 1
-
-print("pierre repo .nvim.lua has been sourced")
