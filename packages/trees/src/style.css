@@ -1502,7 +1502,9 @@
       ease-in-out;
   }
 
-  @container measure (height > 1lh) {
+  /* Subpixel rendering can make a single-line filename slightly taller than
+   * 1lh, falsely showing its truncation marker when it fits horizontally. */
+  @container measure (height > calc(1lh + 1px)) {
     [data-truncate-marker] {
       opacity: 1;
       transition: opacity var(--truncate-internal-marker-fade-in-duration)
